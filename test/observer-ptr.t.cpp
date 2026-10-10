@@ -479,6 +479,15 @@ CASE( "Specialized: Allows to compute hash" )
 #endif // nsop_CPP11_OR_GREATER
 }
 
+CASE( "tweak header: reads tweak header if supported " "[tweak]" )
+{
+#if nsop_HAVE_TWEAK_HEADER
+    EXPECT( OBSERVER_PTR_TWEAK_VALUE == 42 );
+#else
+    EXPECT( !!"Tweak header is not available (nsop_HAVE_TWEAK_HEADER: 0)." );
+#endif
+}
+
 } // namespace
 
 // end of file

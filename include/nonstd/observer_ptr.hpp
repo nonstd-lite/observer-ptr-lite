@@ -20,6 +20,16 @@
 #define nsop_STRINGIFY(  x )  nsop_STRINGIFY_( x )
 #define nsop_STRINGIFY_( x )  #x
 
+// tweak header support:
+
+#if defined(__has_include) && __has_include(<nonstd/observer_ptr.tweak.hpp>)
+# include <nonstd/observer_ptr.tweak.hpp>
+# define nsop_HAVE_TWEAK_HEADER  1
+#else
+# define nsop_HAVE_TWEAK_HEADER  0
+//# pragma message("observer_ptr.hpp: Note: Tweak header not supported.")
+#endif
+
 // observer_ptr configuration:
 
 #ifndef  nsop_CONFIG_ALLOW_IMPLICIT_CONVERSION_FROM_SMART_PTR
