@@ -16,6 +16,7 @@
   - [Synopsis](#synopsis)
     - [Documentation of `std::experimental::observer_ptr`](#documentation-of-stdexperimentalobserver_ptr)
     - [Configuration macros](#configuration-macros)
+      - [Tweak header](#tweak-header)
       - [Standard selection macro](#standard-selection-macro)
       - [Select `std::experimental::observer_ptr` or `nonstd::observer_ptr`](#select-stdexperimentalobserver_ptr-or-nonstdobserver_ptr)
       - [Conversions](#conversions)
@@ -124,11 +125,17 @@ Depending on the compiler and C++-standard used, `nonstd::observer_ptr` behaves 
 
 ### Configuration macros
 
+#### Tweak header
+
+If the compiler supports [`__has_include()`](https://en.cppreference.com/w/cpp/preprocessor/include), *observer-ptr lite* supports the [tweak header](https://vector-of-bool.github.io/2020/10/04/lib-configuration.html) mechanism. Provide your *tweak header* as `nonstd/observer_ptr.tweak.hpp` in a folder in the include-search-path. In the tweak header, provide definitions as documented below, like `#define nsop_CPLUSPLUS 201103L`.
+
 #### Standard selection macro
+
 \-D<b>nsop\_CPLUSPLUS</b>=199711L  
 Define this macro to override the auto-detection of the supported C++ standard, or if your compiler does not set the `__cplusplus` macro correctly.
 
 #### Select `std::experimental::observer_ptr` or `nonstd::observer_ptr`
+
 At default, *observer-ptr lite* uses `std::experimental::observer_ptr` if it is available and lets you use it via namespace `nonstd`. You can however override this default and explicitly request to use `std::experimental::observer_ptr` or *observer-ptr lite*'s `nonstd::observer_ptr` as `nonstd::observer_ptr` via the following macros.
 
 -D<b>nsop\_CONFIG\_SELECT\_OBSERVER_PTR</b>=nsop_OBSERVER_PTR_DEFAULT  
