@@ -5,30 +5,17 @@
 *observer-ptr* is a single-file header-only library with a variant of std::experimental::observer_ptr [[1](#ref1)] for C++98 and later.
 
 **Contents**  
-- [observer\_ptr\<\> for C++98 up](#observer_ptr-for-c98-up)
-  - [Example usage](#example-usage)
-    - [Compile and run](#compile-and-run)
-  - [In a nutshell](#in-a-nutshell)
-  - [License](#license)
-  - [Dependencies](#dependencies)
-  - [Installation](#installation)
-  - [Building the tests](#building-the-tests)
-  - [Synopsis](#synopsis)
-    - [Documentation of `std::experimental::observer_ptr`](#documentation-of-stdexperimentalobserver_ptr)
-    - [Configuration macros](#configuration-macros)
-      - [Tweak header](#tweak-header)
-      - [Standard selection macro](#standard-selection-macro)
-      - [Select `std::experimental::observer_ptr` or `nonstd::observer_ptr`](#select-stdexperimentalobserver_ptr-or-nonstdobserver_ptr)
-      - [Conversions](#conversions)
-      - [Compile-time tests](#compile-time-tests)
-  - [Other open source implementations](#other-open-source-implementations)
-  - [Notes and references](#notes-and-references)
-    - [Notes](#notes)
-    - [References](#references)
-  - [Appendix](#appendix)
-    - [A.1 Compile-time information](#a1-compile-time-information)
-    - [A.2 Observer Ptr test specification](#a2-observer-ptr-test-specification)
 
+- [Example usage](#example-usage)
+- [In a nutshell](#in-a-nutshell)
+- [License](#license)
+- [Dependencies](#dependencies)
+- [Installation](#installation)
+- [Building the tests](#building-the-tests)
+- [Synopsis](#synopsis)
+- [Other open source implementations](#other-open-source-implementations)
+- [Notes and references](#notes-and-references)
+- [Appendix](#appendix)
 
 Example usage
 -------------
